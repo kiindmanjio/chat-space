@@ -1,24 +1,25 @@
-# README
+##users
+| columns | type  |
+|:--------|------:|
+|name     |string |
+|email    |string |
+|password |integer|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##messages
+| columns |  type   |
+|:--------|--------:|
+|body     | text    |
+|image    | string  |
+|user_id  | integer |
+|group_id | integer |
 
-Things you may want to cover:
+##groups
+| columns | type    |
+|:--------|--------:|
+|name     |string   |
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##users_grpups
+|columns  |type     |
+|:--------|--------:|
+|user_id  |integer  |
+|group_id |integer  |
