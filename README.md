@@ -5,6 +5,7 @@
 |email    |string |
 |password |integer|
 
+
 ##messages
 | columns |  type   |
 |:--------|--------:|
@@ -13,12 +14,14 @@
 |user_id  | integer |
 |group_id | integer |
 
+
 ##groups
 | columns | type    |
 |:--------|--------:|
 |name     |string   |
 
-##users_grpups
+
+##user_grpups
 |columns  |type     |
 |:--------|--------:|
 |user_id  |integer  |
