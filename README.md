@@ -21,7 +21,7 @@
 |name     |string   |
 
 
-##user_grpups
+##user_groups
 |columns  |type     |
 |:--------|--------:|
 |user_id  |integer  |
