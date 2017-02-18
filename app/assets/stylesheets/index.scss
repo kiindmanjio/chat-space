@@ -159,12 +159,13 @@
         .form{
           height: 50px;
           width: 850px;
-          ::-webkit-input-placeholder {
-            color:#F00;
-          }
-          input:-moz-placeholder {
-            color:#F00;
-          }
+          padding-left: 10px;
+          position: relative;
+        }
+        .fa{
+          position:relative;
+          left:-30px;
+
         }
         .send-button{
           display: inline;
