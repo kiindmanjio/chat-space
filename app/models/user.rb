@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  # attr_accessor :name
-    validates :name, presence: true
+
+  validates :name, presence: true
 
 end
