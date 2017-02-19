@@ -1,38 +1,38 @@
 .contents
 
-  .left-contents
-    .left-up
-      %h2.user-name JIO
-      .font-awesomes
+  .contents__left
+    .contents__left__up
+      %h2.contents__left__up--user-name JIO
+      .contents__left__up__font-awesomes
         %i.fa.fa-pencil-square-o{"aria-hidden" => "true"}
         %i.fa.fa-cog{"aria-hidden" => "true"}
-    .left-bottom
-      .group-message
-        %p.group 早稲田チーム
-        %p.message なるほど
-      .group-message1
-        %p.group フィリピン
-        %p.message まだメッセージはありません。
-      .group-message2
-        %p.group イーストアングリア
-        %p.message 明日集合で
+    .contents__left__bottom
+      .contents__left__bottom__group-message
+        %p.contents__left__bottom__group-message__group 早稲田チーム
+        %p.contents__left__bottom__group-message__message なるほど
+      .contents__left__bottom__group-message1
+        %p.contents__left__bottom__group-message1__group フィリピン
+        %p.contents__left__bottom__group-message1__message まだメッセージはありません。
+      .contents__left__bottom__group-message2
+        %p.contents__left__bottom__group-message2__group イーストアングリア
+        %p.contents__left__bottom__group-message2__message 明日集合で
 
-  .right-contents
-    .right-top
-      %p.group-name 早稲田チーム
+  .contents__right
+    .contents__right__top
+      %p.contents__right__top--group-name 早稲田チーム
       %input.editbutton{:type => "submit", :value => "Edit"}/
-      %p.members Members:JIO
-    .right-middle
-      .name-date-text
-        %string.name JIO
-        %string.date 2017/02/18 13:25:56
-        %p.text なるほど
-      .name-date-text2
-        %string.name soto
-        %string.date 2017/02/18 14:01:25
-        %p.text じゃあ明日の夜から開始で
-    .right-bottom
-      .form-send
-        %input.form{:placeholder => "type a message", :type => "text"}/
+      %p.contents__right__top--members Members:JIO
+    .contents__right__middle
+      .contents__right__middle__name-date-text
+        %string.contents__right__middle__name-date-text--name JIO
+        %string.contents__right__middle__name-date-text--date 2017/02/18 13:25:56
+        %p.contents__right__middle__name-date-text__text なるほど
+      .contents__right__middle__name-date-text2
+        %string.contents__right__middle__name-date-text2--name soto
+        %string.contents__right__middle__name-date-text2--date 2017/02/18 14:01:25
+        %p.contents__right__middle__name-date-text2__text じゃあ明日の夜から開始で
+    .contents__right__right-bottom
+      .contents__right__right-bottom__form-send
+        %input.contents__right__right-bottom__form-send--form{:placeholder => "type a message", :type => "text"}/
         %i.fa.fa-file-image-o{"aria-hidden" => "true"}
-        %input.send-button{:type => "submit", :value => "Send"}
+        %input.contents__right__right-bottom__form-send--send-button{:type => "submit", :value => "Send"}

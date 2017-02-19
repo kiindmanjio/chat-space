@@ -1,15 +1,15 @@
   .contents{
     width: 1370px;
     height: 700px;
-    .left-contents{
+     &__left{
       background-color: #2f3e51;
       width: 300px;
       height: 700px;
       float: left;
-      .left-up{
+      &__up{
         background-color: #253141;
         height: 100px;
-        .user-name{
+        &--user-name{
           font-size: 20px;
           font-family: bold;
           color:white;
@@ -18,7 +18,7 @@
           width: 30px;
           float: left;
         }
-        .font-awesomes{
+        &__font-awesomes{
           float: right;
           padding-right:20px;
           .fa{
@@ -28,56 +28,56 @@
           }
         }
       }
-      .left-bottom{
+      &__bottom{
         background-color: #2f3e51;
-        .group-message{
-          .group{
+        &__group-message{
+          &__group{
             color: white;
             font-size: 15px;
             padding-top: 20px;
             padding-left: 20px;
           }
-          .message{
+          &__message{
             color: white;
             font-size: 11px;
             padding-left: 20px;
             padding-top: 5px;
           }
         }
-        .group-message1{
+        &__group-message1{
           color: white;
           padding-top: 40px;
           padding-left: 20px;
-          .group{
+          &__group{
             font-size: 15px;
           }
-          .message{
+          &__message{
             font-size: 11px;
           }
         }
-        .group-message2{
+        &__group-message2{
           color: white;
           padding-top: 40px;
           padding-left: 20px;
-          .group{
+          &__group{
             font-size: 15px;
           }
-          .message{
+          &__message{
             font-size: 11px;
           }
         }
       }
     }
-  .right-contents{
+  &__right{
     background-color: gray;
     width: 1070px;
     height: 700px;
     float: right;
-    .right-top{
+    &__top{
       height: 100px;
       background-color: white;
       border-bottom: solid 1px #eeeeee;
-      .group-name{
+      &--group-name{
         font-size: 20px;
         color: #666666;
         padding-top: 30px;
@@ -97,52 +97,52 @@
         margin-right: 40px;
         float: right;
       }
-      .members{
+      &--members{
         font-size: 12px;
         color: #999999;
         padding-left: 40px;
         width: 300px;
       }
     }
-    .right-middle{
+    &__middle{
       height: 500px;
       background-color:white;
-      .name-date-text{
+      &__name-date-text{
         padding-top: 46px;
         padding-left:40px;
-        .name{
+        &--name{
           font-size: 20px;
           font-family: bold;
           color: #434A54;
         }
-        .date{
+        &--date{
           font-size: 12px;
           font-family: bold;
           color: #999999;
           padding-left: 10px;
         }
-        .text{
+        &__text{
           font-style: bold;
           font-size: 14px;
           color: #434A54;
           padding-top: 10px;
         }
       }
-      .name-date-text2{
+      &__name-date-text2{
         padding-top: 40px;
         padding-left: 40px;
-        .name{
+        &--name{
           font-size: 20px;
           font-family: bold;
           color:#434A54;
         }
-        .date{
+        &--date{
           font-size: 12px;
           font-family: bold;
           color: #999999;
           padding-left: 10px;
         }
-        .text{
+        &__text{
           font-style: bold;
           font-size: 14px;
           color: #434A54;
@@ -150,13 +150,13 @@
         }
       }
     }
-    .right-bottom{
+    &__right-bottom{
       background-color: #eeeeee;
       height: 100px;
-      .form-send{
+      &__form-send{
         padding-top: 25px;
         padding-left: 40px;
-        .form{
+        &--form{
           height: 50px;
           width: 850px;
           padding-left: 10px;
@@ -167,7 +167,7 @@
           left:-30px;
 
         }
-        .send-button{
+        &--send-button{
           display: inline;
           border: 2px solid #2E9AFE;
           background-color: #2E9AFE;
