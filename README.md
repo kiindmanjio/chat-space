@@ -6,7 +6,7 @@
 |password |integer|
 
 has_many :messages
-has_many :groups
+has_many :user_groups
 has_many :goups, through::user_groups
 
 
@@ -26,7 +26,7 @@ belongs_to :groups
 |:--------|--------:|
 |name     |string   |
 
-has_many :users
+has_many :user_groups
 has_many :messages
 has_many :users, through: :user_groups
 
@@ -36,5 +36,5 @@ has_many :users, through: :user_groups
 |user_id  |integer  |
 |group_id |integer  |
 
-belongs_to :groups
-belongs_to :users
+belongs_to :group
+belongs_to :user
