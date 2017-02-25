@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 
-  before_action :set_group, only: [:edit]
+  before_action :set_group, only: [:edit,:update]
 
   def index
     @groups = current_user.groups
@@ -26,10 +26,9 @@ class GroupsController < ApplicationController
   end
 
   def update
-    group = Group.find(params[:id])
-    if group.update(group_params)
+    if @group.update(group_params)
       flash[:notice] = "グループが更新されました。"
-      redirect_to  group_messages_path(group)
+      redirect_to  group_messages_path(@group)
     else
       flash[:notice] = "グループが更新できていません。"
       redirect_to edit_group_path
