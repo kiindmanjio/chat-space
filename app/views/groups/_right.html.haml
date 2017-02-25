@@ -1,7 +1,8 @@
 .contents__right
   .contents__right__top
     %p.contents__right__top--group-name= @group.name
-    %input.editbutton{:type => "submit", :value => "Edit", :onclick => "location.href= '/groups/#{@group.id}/edit' "}/
+    = link_to  edit_group_path(@group) do
+      %input.editbutton{:type => "submit", :value => "Edit"}/
     %p.contents__right__top--members Members:
   .contents__right__middle
     .contents__right__middle__name-date-text
