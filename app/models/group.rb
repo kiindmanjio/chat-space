@@ -4,4 +4,4 @@ class Group < ApplicationRecord
   has_many :users, through: :user_groups
   accepts_nested_attributes_for :user_groups, allow_destroy: true
 end
- # has_many :photos, through: :photos_tags
+
