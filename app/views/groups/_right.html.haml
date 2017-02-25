@@ -12,7 +12,7 @@
         %p.contents__right__middle__name-date-text__text= message.body
   .contents__right__right-bottom
     .contents__right__right-bottom__form-send
-      = form_for [@groups,@message], :url => {:action => :create} do |f|
+      = form_for [@group,@message] do |f|
         = f.text_field :body, placeholder: "type a message", class: "contents__right__right-bottom__form-send--form"
         %i.fa.fa-file-image-o{"aria-hidden" => "true"}
         = f.submit "送信する", class: "contents__right__right-bottom__form-send--send-button"
