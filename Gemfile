@@ -55,3 +55,6 @@ gem "haml-rails", "~> 0.9"
 gem "font-awesome-sass"
 gem 'devise'
 gem 'pry-rails'
+gem 'rspec-rails', "~> 3.1.0"
+
+
