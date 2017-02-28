@@ -11,7 +11,7 @@
     - @groups.each do |group|
       = link_to(group_messages_path(group)) do
         %p.contents__left__bottom__group-message__group= group.name
-        %p.contents__left__bottom__group-message__message= group.messages.last
+        %p.contents__left__bottom__group-message__message= group.messages.last.body
 
 
 
