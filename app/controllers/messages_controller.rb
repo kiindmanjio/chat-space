@@ -6,19 +6,14 @@ class MessagesController < ApplicationController
       @message = Message.new
       @group = Group.find(params[:group_id])
       @messages = @group.messages
-      respond_to do |format|
-          format.html
-          format.json
-        end
     end
 
     def create
       # binding.pry
       @message = Message.create(message_params)
       if @message.save
-        redirect_to group_messages_path(params[:group_id])
         respond_to do |format|
-          format.html {redirect_to group_messages_path(params[:group_id])} and return
+          format.html {redirect_to group_messages_path(params[:group_id])}
           format.json
         end
       else
