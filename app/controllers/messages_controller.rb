@@ -1,16 +1,26 @@
 class MessagesController < ApplicationController
 
-    def index
+    def index#_leftからgroup_idが渡されている状態
+      # binding.pry
       @groups = current_user.groups
       @message = Message.new
       @group = Group.find(params[:group_id])
       @messages = @group.messages
+      respond_to do |format|
+          format.html
+          format.json
+        end
     end
 
     def create
+      # binding.pry
       @message = Message.create(message_params)
       if @message.save
-        redirect_to group_messages_path
+        redirect_to group_messages_path(params[:group_id])
+        respond_to do |format|
+          format.html {redirect_to group_messages_path(params[:group_id])} and return
+          format.json
+        end
       else
         flash[:notice] = "本文を入力してください。"
         redirect_to group_messages_path
