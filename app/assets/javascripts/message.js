@@ -2,15 +2,16 @@ $(function(){
   function buildHTML(message){//(message)の中身は21行目のデータ。以下の処理ではmessageとして使える。
     var html = $('<string class = "contents__right__middle__name-date-text--name">' +
                 message.name + '</string>' +
-                '<string class = "contents__right__middle__name-date-text--date">' +
+                '<string class = "contents__right__middle__name-date-text--date">' + 
                 message.time + '</string>' +
-                '<p class = "contents__right__middle__name-date-text__text">' +
+                '<p class = "contents__right__middle__name-date-text__text">' + 
                 message.body + '</p>');
-                return html;
-                }
+      return html;
+    }
+
   $('#new_message').on("submit", function(e){ //view画面の送信ボタンを押したら発火。
     e.preventDefault(); //取得した要素('#new_message')のイベントをキャンセルする。
-    var formdata = new FormData ($(this).get(1)); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
+    var formdata = new FormData ($(this).get(0)); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
    //($(this)get(0))は(this)のフォームのデータを取得している。それに対しnew FormDataによってFormDataオブジェクトを生成.
     $.ajax({
       type: 'POST',//routsにてhttpメソッドがPOST、且つ、
