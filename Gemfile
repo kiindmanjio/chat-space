@@ -38,6 +38,12 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'devise'
+  gem 'pry-rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
 
 group :development do
@@ -53,8 +59,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "haml-rails", "~> 0.9"
 gem "font-awesome-sass"
-gem 'devise'
-gem 'pry-rails'
-gem 'rspec-rails', "~> 3.1.0"
+
+
+
 
 

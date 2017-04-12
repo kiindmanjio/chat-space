@@ -1,10 +1,12 @@
+  html{
+    height:100%;
   .contents{
     width: 1370px;
-    height: 700px;
+    height:700px;
      &__left{
       background-color: #2f3e51;
       width: 300px;
-      height: 700px;
+      height: 800px;
       float: left;
       &__up{
         background-color: #253141;
@@ -71,7 +73,7 @@
   &__right{
     background-color: gray;
     width: 1070px;
-    height: 700px;
+    height: 800px;
     float: right;
     &__top{
       height: 100px;
@@ -105,7 +107,7 @@
       }
     }
     &__middle{
-      height: 500px;
+      height: 600px;
       background-color:white;
       &__name-date-text{
         padding-top: 46px;
@@ -179,6 +181,7 @@
       }
     }
   }
+}
 }
 
 
