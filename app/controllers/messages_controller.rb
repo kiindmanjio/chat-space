@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
 
     def index#_leftからgroup_idが渡されている状態
-      # binding.pry
       @groups = current_user.groups
       @message = Message.new
       @group = Group.find(params[:group_id])
@@ -9,7 +8,6 @@ class MessagesController < ApplicationController
     end
 
     def create
-      # binding.pry
       @message = Message.create(message_params)
       if @message.save
         respond_to do |format|
