@@ -10,7 +10,7 @@ $(function(){
                 }
   $('#new_message').on("submit", function(e){ //view画面の送信ボタンを押したら発火。
     e.preventDefault(); //取得した要素('#new_message')のイベントをキャンセルする。
-    var formdata = new FormData ($(this).get(1)); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
+    var formdata = new FormData ($(this).get(0); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
    //($(this)get(0))は(this)のフォームのデータを取得している。それに対しnew FormDataによってFormDataオブジェクトを生成.
     $.ajax({
       type: 'POST',//routsにてhttpメソッドがPOST、且つ、
@@ -21,6 +21,7 @@ $(function(){
       dataType: 'json',//datatypeはサーバーから返されるデータ型を指定する。jsonと指定していることによってjson形式のデータとして評価し、javascriptのオブジェクトに変換する。
     })//ここでmessagecontrollerのcreateアクションでformat.jsonが読まれたらcreate.json.jbuilderが読まれて、json型のデータが生成。されそれが20行目の(data)に入る
     .done(function(data){
+      console.log(data);
       var html = buildHTML(data);//(data)を引数に2行目のbuildHtMLメソッドが呼ばれる。
       $('.contents__right__middle__name-date-text').append(html);
       $('#new_message')[0].reset();
