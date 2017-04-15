@@ -12,7 +12,7 @@ $(function(){
   $('#new_message').on("submit", function(e){ //view画面の送信ボタンを押したら発火。
     e.preventDefault(); //取得した要素('#new_message')のイベントをキャンセルする。
 
-    var formdata = new FormData ($(this).get(0); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
+    var formdata = new FormData ($(this).get(0)); //FormData オブジェクトは、XMLHttpRequest を使用して送信するためのキーと値のペアのセットを収集可能にする。
 
    //($(this)get(0))は(this)のフォームのデータを取得している。それに対しnew FormDataによってFormDataオブジェクトを生成.
     $.ajax({
