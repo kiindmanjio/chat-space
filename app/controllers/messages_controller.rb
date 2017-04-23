@@ -9,9 +9,7 @@ class MessagesController < ApplicationController
 
     def create
       @users = User.all
-      # binding.pry
       @message = Message.create(message_params)
-      # binding.pry
       if @message.save
         respond_to do |format|
           format.html {redirect_to group_messages_path(params[:group_id])}
