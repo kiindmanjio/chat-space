@@ -1,13 +1,25 @@
 $(function(){
   function buildHTML(message){//(message)の中身は21行目のデータ。以下の処理ではmessageとして使える。
-    var html = $('<string class = "contents__right__middle__name-date-text--name">' +
+    if (message.image == null){
+    var html = $('<li class = "appended_message"' +
+                '<string class = "contents__right__middle__name-date-text--name">' +
                 message.name + '</string>' +
-                '<string class = "contents__right__middle__name-date-text--date">' + 
+                '<string class = "contents__right__middle__name-date-text--date">' +
                 message.time + '</string>' +
-                '<p class = "contents__right__middle__name-date-text__text">' + 
-                message.body + '</p>');
+                '<p class = "contents__right__middle__name-date-text__text">' +
+                message.body + '</p>') + '</li>';
+  }else{
+    var html = $('<li class = "appended_message"' + '<string class = "contents__right__middle__name-date-text--name">' +
+                message.name + '</string>' +
+                '<string class = "contents__right__middle__name-date-text--date">' +
+                message.time + '</string>' +
+                '<p class = "contents__right__middle__name-date-text__text">' +
+                message.body + '</p>' + '<image src = "'+message.image+'">' + '</li>' );
+}
 
-                return html;
+    $('.contents__right__middle').animate({scrollTop: $('.contents__right__middle')[0].scrollHeight}, 'slow');
+
+    return html;
   }
 
 
