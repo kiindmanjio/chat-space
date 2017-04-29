@@ -13,14 +13,16 @@ class GroupsController < ApplicationController
   def create
     @group = Group.create(group_params)
     if @group.save
+      respond_to do |format|
+        format.html {redirect_to groups_path}
+        format.json
+      end
       flash[:notice] = "グループが作成されました。"
-      redirect_to groups_path
     else
       flash[:notice] = "タイトルを入力してください。"
       redirect_to new_group_path
     end
   end
-
 
   def edit
   end

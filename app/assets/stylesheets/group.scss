@@ -80,6 +80,7 @@
 
     &__name {
       float: left;
+      
     }
 
     &__btn {
@@ -105,7 +106,9 @@
     border: 0;
   }
 }
-
+selsect{
+  width:40px;
+}
 .clearfix:after {
   content: '';
   display: table;
