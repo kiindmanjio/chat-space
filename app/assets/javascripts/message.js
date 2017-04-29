@@ -1,4 +1,5 @@
 $(function(){
+
   function buildHTML(message){//(message)の中身は21行目のデータ。以下の処理ではmessageとして使える。
     if (message.image == null){
     var html = $('<li class = "appended_message"' +
@@ -48,10 +49,3 @@ $(function(){
     });
   });
 });
-
-
-// json.time @message.created_at
-// @messageはmessage_controllerのcreateアクションの中の@messageのこと。この記述は@message.created_atの値をtimeに入れてることによって、message.jsファイルのbuildHTML(message)メソッドの中でmessage.timeと書くだけで時間が表示されるようになる。
-// json.body @message.body
-// json.name @message.user.name
-
