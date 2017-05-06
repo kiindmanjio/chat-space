@@ -8,7 +8,7 @@ $(function(){
                 '<string class = "contents__right__middle__name-date-text--date">' +
                 message.time + '</string>' +
                 '<p class = "contents__right__middle__name-date-text__text">' +
-                message.body + '</p>') + '</li>';
+                message.body + '</p>' + '</li>');
   }else{
     var html = $('<li class = "appended_message"' + '<string class = "contents__right__middle__name-date-text--name">' +
                 message.name + '</string>' +

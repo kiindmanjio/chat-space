@@ -10,7 +10,7 @@
         %string.contents__right__middle__name-date-text--name= message.user.name
         %string.contents__right__middle__name-date-text--date= message.created_at
         %p.contents__right__middle__name-date-text__text= message.body
-        %p= image_tag message.image
+        %p= image_tag @message.image
   .contents__right__right-bottom
     .contents__right__right-bottom__form-send
       = form_for [@group,@message] do |f|
