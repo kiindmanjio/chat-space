@@ -61,6 +61,8 @@ gem "haml-rails", "~> 0.9"
 gem "font-awesome-sass"
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
+gem 'dotenv'
 
 
 
