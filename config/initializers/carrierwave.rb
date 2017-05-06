@@ -3,11 +3,11 @@ CarrierWave.configure do |config|
       :provider => 'AWS',
       :aws_access_key_id => ENV['aws_access_key_id'],
       :aws_secret_access_key => ENV['aws_secret_access_key'],
-      :region => 'ap-northeast-1',
+      :region => ENV['region'],
       # :path_style => true,
   }
 
   # config.fog_public     = true
-  config.fog_directory  = 'jio-chat-space'
+  config.fog_directory  = 'directory'
   config.storage = :fog
 end
