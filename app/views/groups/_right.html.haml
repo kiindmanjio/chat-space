@@ -1,0 +1,21 @@
+.contents__right
+  .contents__right__top
+    %p.contents__right__top--group-name= @group.name
+    = link_to  edit_group_path(@group) do
+      %input.editbutton{:type => "submit", :value => "Edit"}/
+    %p.contents__right__top--members Members:
+  .contents__right__middle
+    .contents__right__middle__name-date-text
+      - @messages.each do |message|
+        %string.contents__right__middle__name-date-text--name= message.user.name
+        %string.contents__right__middle__name-date-text--date= message.created_at
+        %p.contents__right__middle__name-date-text__text= message.body
+        %p= image_tag @message.image
+  .contents__right__right-bottom
+    .contents__right__right-bottom__form-send
+      = form_for [@group,@message] do |f|
+        = f.text_field :body, placeholder: "type a message", class: "contents__right__right-bottom__form-send--form"
+        %i.fa.fa-file-image-o{"aria-hidden" => "true"}
+          = f.label :image
+          = f.file_field :image
+          = f.submit "送信する", class: "contents__right__right-bottom__form-send--send-button"

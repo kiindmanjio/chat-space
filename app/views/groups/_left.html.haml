@@ -1,0 +1,22 @@
+.contents__left
+  .contents__left__up
+    %h2.contents__left__up--user-name= current_user.name
+    .contents__left__up__font-awesomes
+      = link_to(new_group_path) do
+        %i.fa.fa-pencil-square-o{"aria-hidden" => "true"}
+      = link_to(edit_user_registration_path) do
+        %i.fa.fa-cog{"aria-hidden" => "true"}
+  .contents__left__bottom
+  .contents__left__bottom__group-message
+    - @groups.each do |group|
+      = link_to(group_messages_path(group)) do #group_idをパラメーターとして送る
+        %p.contents__left__bottom__group-message__group= group.name
+        - if group.messages.present?
+          %p.contents__left__bottom__group-message__message= group.messages.last.body
+        -else
+          %p.contents__left__bottom__group-message__message No messages 
+
+
+
+
+
