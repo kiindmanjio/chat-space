@@ -11,10 +11,10 @@
     - @groups.each do |group|
       = link_to(group_messages_path(group)) do #group_idをパラメーターとして送る
         %p.contents__left__bottom__group-message__group= group.name
-        - if group.messages.present?
+        -if group.messages.present?
           %p.contents__left__bottom__group-message__message= group.messages.last.body
         -else
-          %p.contents__left__bottom__group-message__message No messages 
+          %p.contents__left__bottom__group-message__message No messages
 
 
 
